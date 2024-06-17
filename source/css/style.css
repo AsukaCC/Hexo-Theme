@@ -1,5 +1,16 @@
+/**
+* https://github.com/lxgw/LxgwWenKai
+* LXGW WenKai / 霞鹜文楷
+*/
+@font-face {
+  font-family: 'LxgwWenKai';
+  src: url('./fonts/LXGWWenKaiLite-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'LxgwWenKai', sans-serif;
   margin: 0;
   padding: 0;
 }
