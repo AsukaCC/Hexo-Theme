@@ -1,0 +1,7 @@
+{
+  "name": "vue-theme",
+  "version": "1.0.0",
+  "description": "A custom Hexo theme using Vue 3",
+  "main": "index.js",
+  "dependencies": {}
+}

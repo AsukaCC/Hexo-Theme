@@ -1,0 +1,11 @@
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+
+index:
+  title: Welcome to Hexo Theme
+  content: |
+    <p>Hexo Theme is a simple and elegant theme for Hexo.</p>
+    <p>It is designed to be responsive, fast and beautiful.</p>
+    <p>Enjoy!</p>

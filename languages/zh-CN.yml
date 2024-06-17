@@ -1,0 +1,11 @@
+menu:
+  首页: /
+  归档: /archives
+  关于: /about
+
+index:
+  title: 欢迎使用 Hexo 主题
+  content: |
+    <p>Hexo 主题是一个简单而优雅的 Hexo 主题。</p>
+    <p>它被设计为响应式、快速和美观。</p>
+    <p>享受吧！</p>
