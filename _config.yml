@@ -1,3 +1,2 @@
-language: zh-CN
-language_dir: languages
-change_language: true
+# banner |  横幅
+banner: /images/partial/banner.jpg

@@ -1,41 +1,4 @@
-/**
-* https://github.com/lxgw/LxgwWenKai
-* LXGW WenKai / 霞鹜文楷
-*/
-@font-face {
-  font-family: 'LxgwWenKai';
-  src: url('./fonts/LXGWWenKaiLite-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import './reset.css';
 
-body {
-  font-family: 'LxgwWenKai', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background: #333;
-  color: #fff;
-  padding: 1rem;
-}
-
-header h1 {
-  margin: 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav li {
-  display: inline;
-  margin-right: 1rem;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
+/* partial */
+@import './partial/banner.css';
