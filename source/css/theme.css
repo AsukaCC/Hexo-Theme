@@ -1,0 +1,36 @@
+/* 明亮主题变量 */
+:root {
+  --background: #ffffffff;
+  --foreground: #181818ff;
+  --primary: #1a1a1aff;
+  --primary-foreground: #fafafaff;
+  --secondary: #f2f2f2ff;
+  --secondary-foreground: #1a1a1aff;
+  --destructive: #e60000ff;
+  --destructive-foreground: #fafafaff;
+  --border: #e6e6e6ff;
+  --ring: #1a1a1aff;
+  --radius: 0.5rem;
+
+  /* 导航栏 */
+  --header-background: #ffffff99;
+  --header-border: #54bbff;
+  --menu-item-background: #ffffffff;
+  --menu-item-color: #181818ff;
+  --menu-item-hover-color: #54bbff;
+}
+
+/* 暗黑主题变量 */
+[data-theme='dark'] {
+  --background: #181818ff;
+  --foreground: #fafafaff;
+  --primary: #fafafaff;
+  --primary-foreground: #1a1a1aff;
+  --secondary: #282828ff;
+  --secondary-foreground: #fafafaff;
+  --destructive: #4c0000ff;
+  --destructive-foreground: #fafafaff;
+  --border: #282828ff;
+  --ring: #d1d1d1ff;
+  --radius: 0.5rem;
+}

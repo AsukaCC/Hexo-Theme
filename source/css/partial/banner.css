@@ -4,4 +4,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
+  position: relative;
+  z-index: 10;
+}
+
+#banner .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: var(--primary);
+  background-color: var(--primary-foreground);
+  text-align: center;
 }

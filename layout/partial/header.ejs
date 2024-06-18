@@ -1,4 +1,10 @@
-<div>
-  <h1 id="logo"><%= page.title || __('index.title') || config.title %></h1>
-  <div>天天向上</div>
+<div id="header">
+  <div class="menu">
+    <% for (var key in theme.menu) { %>
+    <div class="menu-item" data-url="<%= url_for(theme.menu[key]) %>">
+      <span> <%- __(`menu.${key}`) %> </span>
+    </div>
+
+    <% } %>
+  </div>
 </div>

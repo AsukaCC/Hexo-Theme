@@ -1,7 +1,9 @@
 menu:
-  Home: /
-  Archives: /archives
-  About: /about
+  home: Home
+  about: About
+  archives: Archives
+  categories: Categories
+  tags: Tags
 
 index:
   title: Welcome to Hexo Theme

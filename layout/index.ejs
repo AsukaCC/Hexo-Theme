@@ -1,3 +1,8 @@
-<%-partial('partial/banner', {}, {cache: true}) %> <%- partial('partial/header',
-{}, {cache: true}) %>
-<div id="content">Home page</div>
+<%-partial('partial/header', {}, {cache: true}) %>
+<%-partial('partial/banner',{}, {cache: true}) %>
+<%-partial('partial/card-home', {}, {cache: true}) %>
+<div class="posts">
+  <% page.posts.each(function(post) { %> <%- partial('partial/post-card', {
+  post: post }) %> <% }) %>
+</div>
+<%-partial('partial/footer', {}, {cache: true}) %>

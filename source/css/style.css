@@ -1,4 +1,31 @@
 @import './reset.css';
 
+@import './home.css';
 /* partial */
+@import './partial/header.css';
 @import './partial/banner.css';
+@import './partial/card-home.css';
+@import './partial/post-card.css';
+
+/**
+* https://github.com/lxgw/LxgwWenKai
+* LXGW WenKai / 霞鹜文楷
+*/
+@font-face {
+  font-family: 'LxgwWenKai';
+  src: url('./fonts/LXGWWenKaiLite-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'LxgwWenKai', sans-serif;
+  font-size: 16px;
+  color: var(--background-color);
+  font-weight: 400;
+  background-color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}

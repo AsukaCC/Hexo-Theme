@@ -1,0 +1,11 @@
+<a href="<%= post.url %>">
+  <div class="post-card">
+    <div class="post-card-content">
+      <div class="post-card-title"><%= post.title %></div>
+      <div><%= post.description %></div>
+      <p class="post-card-excerpt">
+        <%= post.excerpt || post.content.substring(0, 100) %>...
+      </p>
+    </div>
+  </div>
+</a>

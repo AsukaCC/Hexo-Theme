@@ -1,2 +1,9 @@
 # banner |  横幅
 banner: /images/partial/banner.jpg
+
+# | 菜单
+menu:
+  home: /
+  about: /about/
+  archives: /archive/
+  tags: /tags/

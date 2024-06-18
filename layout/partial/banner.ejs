@@ -1,1 +1,5 @@
-<div id="banner" style="background-image: url('<%= theme.banner %>')"></div>
+<div id="banner" style="background-image: url('<%= theme.banner %>')">
+  <div class="title">
+    <%= page.title || __('index.title') || config.title %>
+  </div>
+</div>

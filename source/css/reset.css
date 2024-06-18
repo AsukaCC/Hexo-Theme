@@ -131,24 +131,6 @@ table {
 
 /* Custom styles */
 
-/**
-* https://github.com/lxgw/LxgwWenKai
-* LXGW WenKai / 霞鹜文楷
-*/
-@font-face {
-  font-family: 'LxgwWenKai';
-  src: url('./fonts/LXGWWenKaiLite-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-body {
-  font-family: 'LxgwWenKai', sans-serif;
-  font-size: 16px;
-  color: #333;
-  font-weight: 400;
-}
-
 a {
   text-decoration: none;
   color: inherit;
