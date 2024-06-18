@@ -5,4 +5,17 @@
   <% page.posts.each(function(post) { %> <%- partial('partial/post-card', {
   post: post }) %> <% }) %>
 </div>
+
+<!-- 分页导航 -->
+<nav class="pagination">
+  <% if (page.prev) { %>
+  <a href="<%= page.prev_link %>" class="newer">上一页</a>
+  <% } else { %>
+  <span class="newer disabled">上一页</span>
+  <% } %> <% if (page.next) { %>
+  <a href="<%= page.next_link %>" class="older">下一页</a>
+  <% } else { %>
+  <span class="older disabled">下一页</span>
+  <% } %>
+</nav>
 <%-partial('partial/footer', {}, {cache: true}) %>
