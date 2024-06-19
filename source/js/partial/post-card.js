@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.post-card').forEach(function (postCard) {
     postCard.addEventListener('click', function () {
       const url = postCard.getAttribute('data-url');
-      if (url) {
-        window.location.href = url;
+      if (url && url !== window.location.href) {
+        console.log('🚀 ~ window.location.href:', window.location.href);
+        console.log(url);
+        // window.location.href = url;
       } else {
         console.log('🚀 ~ url is empty or not defined.');
       }
