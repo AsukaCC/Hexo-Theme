@@ -1,4 +1,7 @@
-<div id="banner" style="background-image: url('<%= theme.banner %>')">
+<div
+  id="banner"
+  style="background-image: url('<%= url_for('/images/partial/banner.jpg') %>')"
+>
   <div class="title">
     <%= page.title || __('index.title') || config.title %>
   </div>
