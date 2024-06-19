@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     item.addEventListener('click', function () {
       const url = item.getAttribute('data-url');
       if (url && url != window.location.pathname) {
-        window.location.href = url;
+        window.location.pathname = url;
       }
     });
   });
