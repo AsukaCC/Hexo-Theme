@@ -1,22 +1,5 @@
 <!DOCTYPE html>
-<html>
-  <header>
-    <meta charset="UTF-8" />
-    <link
-      rel="preload"
-      href="<%= url_for('/css/fonts/LXGWWenKaiLite-Regular.ttf') %>"
-      as="font"
-      type="font/ttf"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="<%= url_for('/css/theme.css') %>" />
-    <link rel="stylesheet" href="<%= url_for('/css/style.css') %>" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="<%= url_for('/js/main.js') %>"></script>
-    <script src="<%= url_for('js/partial/header.js') %>"></script>
-    <script src="<%= url_for('js/partial/post-card.js') %>"></script>
-  </header>
-
+<%-partial('partial/head') %>
   <body>
     <%- body %>
   </body>

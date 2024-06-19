@@ -1,0 +1,22 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <% const title = page.title || __('website.activeTitle') || config.title; %>
+  <title><%= title %></title>
+  <link
+    rel="preload"
+    href="<%= url_for('/css/fonts/LXGWWenKaiLite-Regular.ttf') %>"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="<%= url_for('/css/theme.css') %>" />
+  <link rel="stylesheet" href="<%= url_for('/css/style.css') %>" />
+  <script src="<%= url_for('/js/main.js') %>"></script>
+  <script src="<%= url_for('js/partial/header.js') %>"></script>
+  <script src="<%= url_for('js/partial/post-card.js') %>"></script>
+</head>
+<script>
+   var activeTitle = '<%= __('website.activeTitle') %>';
+  var inactiveTitle = '<%= __('website.inactiveTitle') %>';
+</script>
