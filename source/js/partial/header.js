@@ -1,19 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   let lastScrollTop = 0;
-  let scrollNumber = 0;
 
-  function scrollScreen() {
-    const windowHeight = window.innerHeight;
-    if (scrollNumber <= 1) {
-      let position = windowHeight * (scrollNumber + 1) + 80;
-      window.scrollTo({
-        top: position,
-        behavior: 'smooth',
-      });
-    }
-    scrollNumber++;
-  }
-
+  // 隐藏导航栏
   function hideHeader() {
     var dom = document.getElementById('header');
     if (dom) {
@@ -21,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // 显示导航栏
   function showHeader() {
     var dom = document.getElementById('header');
     if (dom) {

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (document.hidden) {
       document.title = inactiveTitle || '👋🏻 我在这里！';
     } else {
-      document.title = activeTitle || '🎉 欢迎回来！';
+      document.title = pageTitle || activeTitle || '🎉 欢迎回来！';
     }
   });
 });
