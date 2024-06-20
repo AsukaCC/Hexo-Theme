@@ -20,6 +20,14 @@
   --menu-item-background: #ffffffff;
   --menu-item-color: #181818ff;
   --menu-item-hover-color: #54bbff;
+
+  --background-line-1: linear-gradient(
+    53deg,
+    #1a2a20,
+    #58625b,
+    #9ea19e,
+    #eae4e6
+  );
 }
 
 /* 暗黑主题变量 */

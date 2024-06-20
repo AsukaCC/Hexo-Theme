@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const postWarp = document.querySelector('.post-warp');
+  const postWarp = document.querySelector('#home-post-warp');
   if (postWarp) {
     postWarp.addEventListener('wheel', (e) => {
       e.preventDefault(); // 防止默认的垂直滚动

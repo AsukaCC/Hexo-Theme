@@ -1,14 +1,5 @@
 <%- partial('partial/header') %>
 
-<article class="article-warp">
-  <h1 class="post-title"><%= page.title %></h1>
-  <div class="post-meta">
-    <span><%= page.date.format('YYYY-MM-DD') %></span>
-    <% if (page.author) { %>
-    <span> | <%= page.author %></span>
-    <% } %>
-  </div>
-  <%- partial('partial/article') %>
-</article>
+<article class="post-warp"><%- partial('partial/page') %></article>
 
 <%- partial('partial/footer') %>

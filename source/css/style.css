@@ -1,11 +1,13 @@
 @import './reset.css';
 
 @import './home.css';
+@import './post.css';
 /* partial */
 @import './partial/header.css';
 @import './partial/banner.css';
 @import './partial/card-home.css';
 @import './partial/post-card.css';
+@import './partial/page.css';
 @import './partial/article.css';
 @import './partial/footer.css';
 @import './partial/highlight.css';
@@ -28,4 +30,7 @@ body {
   background-color: var(--background);
   overflow-x: hidden;
   cursor: default;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

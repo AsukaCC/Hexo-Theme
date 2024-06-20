@@ -1,0 +1,13 @@
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+  color: var(--primary);
+}
+
+.page-meta {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--primary);
+  margin: 20px auto;
+}

@@ -7,6 +7,6 @@
   </div>
   <div class="post-card-title" title="<%= post.title %>"><%= post.title %></div>
   <p class="post-card-excerpt">
-    <%= post.excerpt || post.content.substring(0, 100) %>...
+    <%= post.excerpt.substring(0, 20) || post.content.substring(0, 20) %>...
   </p>
 </div>

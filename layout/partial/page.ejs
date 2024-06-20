@@ -1,0 +1,8 @@
+<div class="page-title"><%= page.title %></div>
+<div class="page-meta">
+  <span><%= page.date.format('YYYY-MM-DD') %></span>
+  <% if (page.author) { %>
+  <span> | <%= page.author %></span>
+  <% } %>
+</div>
+<%- partial('partial/article') %>
