@@ -1,8 +1,12 @@
-.posts {
+.post-warp {
+  width: 100vw;
   display: flex;
-  min-height: 100vh;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  height: 50vh;
+  min-height: 450px;
+  flex-wrap: nowrap;
+  padding: 0 10vw 0;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
 }

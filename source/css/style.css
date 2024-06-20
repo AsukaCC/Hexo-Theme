@@ -24,8 +24,5 @@ body {
   color: var(--primary);
   font-weight: 400;
   background-color: var(--background);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   overflow-x: hidden;
 }

@@ -8,7 +8,7 @@ categories:
   - 示例分类
 author: '作者名'
 excerpt: '这是一个简短的摘要，用于展示在卡片上。'
-permalink: example-post
+permalink:
 ---
 
 # 示例文章标题
