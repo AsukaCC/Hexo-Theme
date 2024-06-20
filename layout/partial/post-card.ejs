@@ -1,8 +1,12 @@
 <div class="post-card" data-url="<%= url_for(post.path) %>">
-  <div class="post-card-content">
-    <h2 class="post-card-title"><%= post.title %></h2>
-    <p class="post-card-excerpt">
-      <%= post.excerpt || post.content.substring(0, 100) %>...
-    </p>
+  <div class="card-cover">
+    <!-- <img src="https://www.loliapi.com/acg/" /> -->
+    <img
+      src="https://picapi.pai.al/api/scenery.php?timestamp=<%= new Date().getTime() %>"
+    />
   </div>
+  <div class="post-card-title" title="<%= post.title %>"><%= post.title %></div>
+  <p class="post-card-excerpt">
+    <%= post.excerpt || post.content.substring(0, 100) %>...
+  </p>
 </div>

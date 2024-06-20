@@ -6,7 +6,9 @@
 @import './partial/banner.css';
 @import './partial/card-home.css';
 @import './partial/post-card.css';
-
+@import './partial/article.css';
+@import './partial/footer.css';
+@import './partial/highlight.css';
 /**
 * https://github.com/lxgw/LxgwWenKai
 * LXGW WenKai / 霞鹜文楷
@@ -25,4 +27,5 @@ body {
   font-weight: 400;
   background-color: var(--background);
   overflow-x: hidden;
+  cursor: default;
 }
