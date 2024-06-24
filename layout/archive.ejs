@@ -1,2 +1,39 @@
-<%-partial('partial/header', {}, {cache: true}) %>
-<div>归档</div>
+<%- partial('partial/header', {}, {cache: true}) %>
+<div id="page-warp">
+  <div class="archive">
+  <% if (site.posts && site.posts.length) { %>
+    <% let currentYear = null; %>
+    <% let currentMonth = null; %>
+    <% site.posts.sort('-date').each(function(post) { %>
+      <% if (post.date) { %>
+        <% var year = post.date.year(); %>
+        <% var month = post.date.format('MM'); %>
+        <% if (year !== currentYear) { %>
+          <% if (currentYear !== null) { %>
+            </ul>
+            </div> <!-- 关闭上一个年份的 div -->
+          <% } %>
+          <div class="archive-item">
+             <div class="item-year"><%= post.date.locale(config.language).format('YYYY') %></div>
+            <ul>
+          <% currentYear = year; %>
+        <% } %>
+        <% if (month !== currentMonth) { %>
+         <div class="item-month"><%= post.date.locale(config.language).format('MMMM') %></div>
+          <% currentMonth = month; %>
+        <% } %>
+        <li class="post-item">
+          <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+          <span><%= post.date.format('YYYY-MM-DD') %></span>
+        </li>
+      <% } %>
+    <% }) %>
+    </ul>
+    </div> <!-- 关闭最后一个年份的 div -->
+  <% } else { %>
+    <p>No posts found.</p>
+  <% } %>
+  </div>
+</div>
+
+<%- partial('partial/footer', {}, {cache: true}) %>

@@ -3,6 +3,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <% const title = page.title || __('website.activeTitle') || config.title; %>
   <title><%= title %></title>
+  <% if (theme.favicon) { %>
+  <link rel="icon" href="<%= url_for(theme.favicon) %>" type="image/x-icon" />
+  <% } %>
   <link
     rel="preload"
     href="<%= url_for('/css/fonts/LXGWWenKaiLite-Regular.ttf') %>"
@@ -13,11 +16,82 @@
   <link rel="stylesheet" href="<%= url_for('/css/theme.css') %>" />
   <link rel="stylesheet" href="<%= url_for('/css/style.css') %>" />
   <script src="<%= url_for('/js/main.js') %>"></script>
-  <script src="<%= url_for('js/partial/header.js') %>"></script>
-  <script src="<%= url_for('js/partial/post-card.js') %>"></script>
 </head>
 <script>
   var pageTitle = '<%= title %>';
-   var activeTitle = '<%= __('website.activeTitle') %>';
-  var inactiveTitle = '<%= __('website.inactiveTitle') %>';
+  var activeTitle = '<%= __("website.activeTitle") %>';
+  var inactiveTitle = '<%= __("website.inactiveTitle") %>';
+  document.addEventListener('DOMContentLoaded', function () {
+    let lastScrollTop = 0;
+
+    // 隐藏导航栏
+    function hideHeader() {
+      var dom = document.getElementById('header');
+      if (dom) {
+        dom.style.top = '-80px';
+      }
+    }
+
+    // 显示导航栏
+    function showHeader() {
+      var dom = document.getElementById('header');
+      if (dom) {
+        dom.style.top = '0';
+      }
+    }
+
+    // 检测设备类型
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // 移动设备触摸事件监听器
+      let touchStartY = 0;
+      let touchEndY = 0;
+
+      window.addEventListener('touchstart', function (event) {
+        touchStartY = event.touches[0].clientY;
+      });
+
+      window.addEventListener('touchmove', function (event) {
+        touchEndY = event.touches[0].clientY;
+      });
+
+      window.addEventListener('touchend', function () {
+        if (touchStartY > touchEndY) {
+          hideHeader();
+        } else {
+          showHeader();
+        }
+      });
+    } else {
+      // 桌面设备滚动事件监听器
+      window.addEventListener('scroll', function () {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          hideHeader();
+        } else {
+          showHeader();
+        }
+        lastScrollTop = scrollTop;
+      });
+    }
+
+    // 添加 menu-item 点击事件监听器
+    document.querySelectorAll('.menu-item').forEach(function (item) {
+      item.addEventListener('click', function () {
+        const url = item.getAttribute('data-url');
+        if (url && url != window.location.pathname) {
+          window.location.pathname = url;
+        }
+      });
+    });
+  });
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      document.title = inactiveTitle || '👋🏻 我在这里！';
+    } else {
+      document.title = pageTitle || activeTitle || '🎉 欢迎回来！';
+    }
+  });
 </script>

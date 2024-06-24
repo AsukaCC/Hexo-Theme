@@ -1,0 +1,51 @@
+.archive {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.archive .archive-item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.archive .archive-item ul {
+  margin-bottom: 20px;
+}
+.archive .archive-item .post-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.archive .archive-item .post-item a:hover {
+  color: var(--hover-color-1);
+}
+
+.archive .archive-item .post-item span {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: 400;
+  color: var(--primary);
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.archive .archive-item .item-year {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--primary);
+}
+.archive .archive-item .item-month {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--primary);
+  margin: 20px 10px;
+}

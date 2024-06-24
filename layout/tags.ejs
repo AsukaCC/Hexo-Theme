@@ -1,2 +1,40 @@
-<%-partial('partial/header', {}, {cache: true}) %>
-<div>标签</div>
+<%- partial('partial/header', {}, {cache: true}) %>
+
+<div id="page-warp">
+  <div class="tag-list">
+    <% site.tags.sort('name').each(function(tag) { %>
+    <div class="tag-item">
+      <h2 class="tag-name" data-tag="<%= tag.name %>">
+        <%= tag.name %> (<%= tag.length %>)
+      </h2>
+      <ul class="post-list" id="posts-<%= tag.name %>">
+        <% tag.posts.sort('-date').each(function(post) { %>
+        <li class="post-item">
+          <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+          <span class="post-date"><%= post.date.format('YYYY-MM-DD') %></span>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- partial('partial/footer', {}, {cache: true}) %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var tagNames = document.querySelectorAll('.tag-name');
+    tagNames.forEach(function (tagName) {
+      tagName.addEventListener('click', function () {
+        var tag = this.getAttribute('data-tag');
+        var postList = document.getElementById('posts-' + tag);
+        if (postList.style.display === 'block') {
+          postList.style.display = 'none';
+        } else {
+          postList.style.display = 'block';
+        }
+      });
+    });
+  });
+</script>
