@@ -1,20 +1,36 @@
 <footer id="footer">
   <div class="footer-content">
-    <p>
-      &copy; <%= new Date().getFullYear() %> 版权所有. 使用
-      <a href="https://hexo.io" target="_blank" rel="noopener noreferrer"
-        >Hexo</a
-      >
-      构建.
-    </p>
-    <p>
-      @
-      <a
-        href="https://github.com/JiangCheng"
-        target="_blank"
-        rel="noopener noreferrer"
-        >JiangCheng</a
-      >.
-    </p>
+    <div>
+      <img src="https://asukaforever.com/api/counter/asukacc_blog?type=asoul" />
+    </div>
+    <div>
+      <p>
+        &copy; <%= new Date().getFullYear() %> 版权所有. 使用
+        <a href="https://hexo.io" target="_blank" rel="noopener noreferrer"
+          >Hexo</a
+        >
+        构建.
+      </p>
+      <p>
+        @
+        <a
+          href="https://github.com/JiangCheng"
+          target="_blank"
+          rel="noopener noreferrer"
+          >JiangCheng</a
+        >.
+      </p>
+    </div>
   </div>
 </footer>
+
+<style>
+  #footer .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer .footer-content > div:last-child {
+    margin-left: 20px;
+  }
+</style>
